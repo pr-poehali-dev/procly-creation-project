@@ -72,8 +72,32 @@ export default function Index() {
               <span className="text-xl font-heading font-bold">Procly</span>
             </div>
             <nav className="hidden md:flex space-x-6">
-              <a href="#features" className="text-gray-600 hover:text-gray-900">Возможности</a>
-              <a href="#integrations" className="text-gray-600 hover:text-gray-900">Интеграции</a>
+              <div className="relative group">
+                <button className="flex items-center text-gray-600 hover:text-gray-900">
+                  Продукт
+                  <Icon name="ChevronDown" size={16} className="ml-1" />
+                </button>
+                <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                  <div className="py-2">
+                    <a href="#overview" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-50">
+                      <Icon name="Eye" size={16} className="mr-3" />
+                      Обзор
+                    </a>
+                    <a href="#templates" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-50">
+                      <Icon name="FileTemplate" size={16} className="mr-3" />
+                      Шаблоны
+                    </a>
+                    <a href="#ai" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-50">
+                      <Icon name="Brain" size={16} className="mr-3" />
+                      ИИ
+                    </a>
+                    <a href="#integrations" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-50">
+                      <Icon name="Plug" size={16} className="mr-3" />
+                      Интеграции
+                    </a>
+                  </div>
+                </div>
+              </div>
               <a href="#pricing" className="text-gray-600 hover:text-gray-900">Тарифы</a>
               <a href="#docs" className="text-gray-600 hover:text-gray-900">Документация</a>
             </nav>
